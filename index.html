@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="민찬피티(MINCANPT) - 웹사이트, 사진, 영상, PPT, 편집, 마인크래프트 모드를 만드는 AI 플랫폼">
+<meta name="robots" content="index,follow">
+<title>민찬피티 | MINCANPT</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside id="sidebar" class="sidebar">
+    <div class="brand"><span>✦</span><div><b>민찬피티</b><small>MINCANPT</small></div></div>
+    <button id="sideClose" class="plain">‹</button>
+    <button id="newChat" class="new-chat">＋ 새 대화</button>
+    <button class="side-link active" data-go="home">⌂　홈</button>
+    <div class="label">대화 목록 <em>자동 이름</em></div>
+    <div id="chatList" class="chat-list"></div>
+    <div class="side-bottom">
+      <button class="side-link" data-go="settings">⚙　설정</button>
+      <button class="side-link" data-go="help">?　도움말</button>
+      <button class="side-link" id="creator">👨‍💻　제작자</button>
+      <button class="profile">🐱　민찬 <span>⌄</span></button>
+    </div>
+  </aside>
+
+  <main class="main" id="home">
+    <header class="topbar">
+      <button id="sideOpen" class="menu">☰</button>
+      <b class="mobile-brand">✦ 민찬피티</b>
+      <div class="top-right">🔔 <span class="avatar">🐱</span></div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-inner">
+        <h1><span>상상을 입력하면,</span><br>작품이 됩니다.</h1>
+        <p>민찬피티는 당신의 아이디어를<br>웹사이트, 이미지, 영상, PPT 등으로 만들어주는 AI 플랫폼입니다.</p>
+        <div class="prompt">
+          <input id="prompt" aria-label="민찬피티 입력" placeholder="무엇이든 물어보세요. 예) 홈페이지 만들어줘">
+          <button id="send">➤</button>
+        </div>
+        <div class="chips">
+          <button data-feature="인기">🔥 인기</button>
+          <button data-feature="웹사이트 만들기">웹사이트 만들기</button>
+          <button data-feature="PPT 만들기">PPT 만들기</button>
+          <button data-feature="영상 만들기">영상 만들기</button>
+          <button data-feature="사진 편집">사진 편집</button>
+          <button data-feature="마인크래프트 모드 만들기">🎮 마인크래프트 모드</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="cards">
+      <article class="card" data-feature="웹사이트 만들기"><div class="art web">🌐</div><div><h2>웹사이트 만들기</h2><p>AI가 디자인부터 코딩까지 만들어줍니다.</p><button>시작하기 →</button></div></article>
+      <article class="card" data-feature="사진 만들기"><div class="art image">🖼️</div><div><h2>사진 만들기</h2><p>상상하는 이미지를 AI로 만들어줍니다.</p><button>시작하기 →</button></div></article>
+      <article class="card" data-feature="영상 만들기"><div class="art video">🎬</div><div><h2>영상 만들기</h2><p>텍스트로 영상을 제작합니다.</p><button>시작하기 →</button></div></article>
+      <article class="card" data-feature="PPT 만들기"><div class="art ppt">📊</div><div><h2>PPT 만들기</h2><p>발표 자료를 깔끔하게 만들어줍니다.</p><button>시작하기 →</button></div></article>
+      <article class="card" data-feature="동영상 편집"><div class="art edit">✂️</div><div><h2>동영상 편집</h2><p>자르기, 합치기, 자막, 효과를 지원합니다.</p><button>시작하기 →</button></div></article>
+      <article class="card" data-feature="사진 편집"><div class="art photo">🖌️</div><div><h2>사진 편집</h2><p>배경 제거, 보정, 크기 변경 등을 지원합니다.</p><button>시작하기 →</button></div></article>
+      <article class="card" data-feature="마인크래프트 모드 만들기"><div class="art mc">⛏️</div><div><h2>마인크래프트 모드 만들기</h2><p>Fabric, Forge, NeoForge 프로젝트를 만듭니다.</p><button>시작하기 →</button></div></article>
+      <article class="card" data-feature="물건 고장 분석"><div class="art tool">🔧</div><div><h2>물건 고장 분석</h2><p>사진과 증상을 바탕으로 확인을 도와줍니다.</p><button>시작하기 →</button></div></article>
+    </section>
+  </main>
+</div>
+
+<div id="modal" class="modal" aria-hidden="true">
+  <div class="modal-box">
+    <button id="modalClose" class="modal-close">×</button>
+    <h2 id="modalTitle">민찬피티</h2>
+    <div id="modalBody"></div>
+  </div>
+</div>
+<div id="toast" class="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
